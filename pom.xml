@@ -11,9 +11,9 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	<build>
+	<!--<build> Working -> For Creating jar file 
 		<plugins>
-		<plugin> <!-- add -->
+		<plugin> 
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.10.1</version>
@@ -21,7 +21,7 @@
 						<source>1.8</source>
 						<target>1.8</target>
 					</configuration>
-				</plugin><!-- add -->
+				</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.1.0</version>
@@ -38,8 +38,8 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>make-assembly</id> <!-- this is used for inheritance merges -->
-						<phase>package</phase> <!-- bind to the packaging phase -->
+						<id>make-assembly</id>//  this is used for inheritance merges
+						<phase>package</phase> // bind to the packaging phase
 						<goals>
 							<goal>single</goal>
 						</goals>
@@ -47,10 +47,10 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+	</build>  -->
 	
 	
-	<!--<build>
+<build> 
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -68,8 +68,9 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build> -->
-	<!-- <build> <plugins> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
+	</build>
+	<!-- Working = Running Java class
+	<build> <plugins> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
 		<version>3.1.0</version> <executions> <execution> <id>ArithmeticOperation</id> 
 		Some Randam Name <phase>package</phase> <goals> <goal>java</goal> </goals> 
 		</execution> </executions> <configuration> <mainClass>com.sify.MathApp</mainClass> 
